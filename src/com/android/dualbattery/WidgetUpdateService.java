@@ -87,20 +87,28 @@ public class WidgetUpdateService extends Service {
 	}
 	
 	
-  @Override  
-  public void onStart(Intent intent, int startId) {   
-      
-      Log.d(TAG,"onStart"); 
+    @Override
+    public int onStartCommand(Intent intent, int flags, int startId) {
+        // TODO Auto-generated method stub
+        
+        Log.d(TAG, "onStartCommand");
+        long id = Thread.currentThread().getId();
+        Log.d(TAG,"------->onStartCommand tid="+id);
+        
+        registerReceiver(mReceiver, new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
+        
+        new ServiceThread().start();
+        
+        return START_STICKY;
+    }    
 
-      // 向系统注册电池电量更新广播,只接受带有ACTION_BATTERRY_CHANGED事件的Intent   
-      registerReceiver(this.bCR, new IntentFilter(Intent.ACTION_BATTERY_CHANGED));   
-      long id = Thread.currentThread().getId();
-      Log.d(TAG,"------->service start thread id = "+id);
-      
-      new ServiceThread().start();  
-  
-     
-  }   
+    @Override
+    public void onDestroy() {
+        // TODO Auto-generated method stub
+        unregisterReceiver(mReceiver);
+        Log.d(TAG, "onDestroy");
+        super.onDestroy();
+    }
   
   public class ServiceThread extends Thread {  
       public void run() {

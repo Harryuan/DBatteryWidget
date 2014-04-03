@@ -1,29 +1,17 @@
 package com.android.dualbattery;
 
-import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
-import android.content.BroadcastReceiver;
-import android.content.ComponentName;
+
 import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
-import android.provider.Settings;
 import android.util.Log;
-import android.widget.RemoteViews;
-import android.os.BatteryManager;
-import android.os.Handler;//added by huiyang.tang
-import android.app.ActivityManager;
-import java.util.ArrayList;
-import java.util.List;
 
-//yuanhl 
-//import android.content.pm.PackageManager;
-  
-//DBatteryWidgetprovider
+ 
+
 public class DualBatteryWidget extends AppWidgetProvider{
 
-	private final static String TAG= "DBatteryWidgetprovider";
+	private final static String TAG= "DualBatteryWidget";
 	private final static boolean log = true;
 
 	@Override
