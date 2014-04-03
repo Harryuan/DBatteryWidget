@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">   
+    <string name="app_name">情景模式設定檔</string>
+      <string name="normal">一般</string>
+    <string name="silence">靜音</string>
+    <string name="out_door">戶外</string>  
+    <string name="meeting">會議</string>
+    <string name="fly">飛行</string>
+    <string name="actived">模式已啟動</string>
+    <string name="flyactivating">激活飛航設定?</string>
+    <string name="comfirm">确認</string>
+    <string name="cancel">取消</string>   
+    <string name="mode">設定</string>
+    <string name="noticetitle">情景模式設定檔設定</string>
+    <string name="noticebefore">目前</string>
+    <string name="noticeafter">模式，移動面板切換為另一模式。</string>
+</resources>

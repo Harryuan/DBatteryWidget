@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="hello">Hello World!</string>
+    <string name="app_name">电池设置</string>
+    <string name="normal">标准</string>
+    <string name="silence">静音</string>
+    <string name="out_door">户外</string>
+    <string name="meeting">会议</string>
+    <string name="fly">飞行</string>
+    <string name="actived">模式已激活</string>
+    <string name="flyactivating">激活飞行模式?</string>    
+    <string name="comfirm">确认</string>
+    <string name="cancel">取消</string>    
+    <string name="mode">模式</string>
+    <string name="noticetitle">情景模式设置</string>
+    <string name="noticebefore">当前</string>
+    <string name="noticeafter">模式，转动圆盘切换到其他模式</string>
+</resources>
