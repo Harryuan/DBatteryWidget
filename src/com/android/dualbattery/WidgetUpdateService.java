@@ -116,10 +116,10 @@ public class WidgetUpdateService extends Service {
     	        long id = Thread.currentThread().getId();
     	        Log.d(TAG,"------->Thread thread id = "+id);
     	    	if(flagService){
-    	    	    //
+                    Log.d(TAG,"ServiceThread flashWidget");    	    	    
     	        	flashWidget(mBatteryBean);
     	        	flagService = false; 
-    	            Log.d(TAG,"onStart return");
+    	            Log.d(TAG,"ServiceThread flagService=true");
     	        	break ;
     	    	}
     	    	try{
@@ -127,7 +127,7 @@ public class WidgetUpdateService extends Service {
     	    	}catch(Exception e){
     	    		e.printStackTrace();
     	    	}
-    	    	 Log.d(TAG,"onStart returnssdsd");
+    	    	 Log.d(TAG,"ServiceThread returned");
     	    }
       }  
   }  
@@ -164,7 +164,7 @@ public int onStartCommand(Intent intent, int flags, int startId) {
   private BatteryBean mBatteryBean = null;
   private PendingIntent pIntent = null ;
   
-  private BroadcastReceiver bCR = new BroadcastReceiver() {   
+  private BroadcastReceiver mReceiver = new BroadcastReceiver() {   
       @Override  
       public void onReceive(Context context, Intent intent) { 
     	    mContext = context;
@@ -221,7 +221,7 @@ public int onStartCommand(Intent intent, int flags, int startId) {
 		  	if(changeFlag){
 					return ; 
 		  	}
-		  	
+            Log.d(TAG,"mReceiver flashWidget"); 
 		  	flashWidget(mBatteryBean); 
       }   
     };   
