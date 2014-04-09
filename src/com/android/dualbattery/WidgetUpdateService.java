@@ -42,14 +42,14 @@ public class WidgetUpdateService extends Service {
 	private int getBattLevelIndex(int level)
 	{	
 		int index = 0;
-		if(level < 4)	index = 0;
-		else if (level < 16) index = 1;
-		else if (level < 28) index = 2;
-		else if (level < 43) index = 3;
-		else if (level < 57) index = 4;
-		else if (level < 71) index = 5;
-		else if (level < 100) index = 6;
-		else if (level >= 100) index = 7;
+		if(level <= 4)	index = 0;
+		else if (level <= 15) index = 1;
+		else if (level <= 35) index = 2;
+		else if (level <= 49) index = 3;
+		else if (level <= 60) index = 4;
+		else if (level <= 75) index = 5;
+		else if (level <= 90) index = 6;
+		else index = 7;
 		return index;
 		
 	}
